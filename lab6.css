@@ -1,0 +1,160 @@
+/* lab6.css */
+/* accompanies lab6.html */
+/* Katie Anderson */
+/* May 5, 2018 */
+
+/* sets page defaults */
+html {
+    font-size: 62.5%;
+    font-family: helvetica, arial, sans-serif;
+    background: gainsboro;
+}
+
+.wrapper {
+    width: 80em;
+    margin: 2em auto;
+    padding: 2em;
+    background: white;
+}
+
+/* sets font styles */
+h1{
+    font-size: 3em;
+    text-align: center;
+    padding: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-weight: 600;
+    padding-bottom: 2em;
+}
+
+h2{
+   font-weight: 600;
+   font-style: italic;
+   display: inline;
+}
+
+section{
+    font-size: 1.25em;
+    padding-top: 5em;
+    padding-right: 2em;
+    line-height: 1.25em;
+}
+
+figcaption {
+    color: #818181;
+    font-style: italic;
+    position: relative;
+    box-shadow: 0.5em 0.5em 5em #818181;
+    padding: 1em;
+    background-color: #FFFFFF;
+    width: 7.5em;
+    line-height: 1.3em;
+}
+
+/* sets location of Sunday Afternoon figcaption */
+section figure:nth-of-type(1) figcaption {
+    position: relative;
+    right: 7.25em;
+    top: -14em;   
+}
+
+/* sets location of Nighthawks figcaption */
+section figure:nth-of-type(2) figcaption {
+    position: relative;
+    left: 34em;
+    top: -10em;
+}
+
+/* sets image size */
+img {
+    width: 35em;
+}
+
+/* sets navigation area */
+nav {
+    font-size: 2em;
+    color: #818181;
+    position: fixed;
+    text-align: center;
+    padding: 0em;
+    margin-top: 0em;
+    z-index: 1;
+}
+
+nav a {
+    display: block;
+    border: outset .0625em #aaa;
+    background: ghostwhite;
+    text-decoration: none;
+    padding: 1.25em 1.5em;
+    margin: 0.35em 1em;
+    width: 6em;
+    color: #818181;
+}
+
+nav a:hover {
+    background: #818181;
+    color: white;
+}
+
+nav a:active {
+    border: inset .0625em #aaa;
+}
+
+/* sets css grid size */
+#gridContainer {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 8em 4em;
+}
+
+/* sets css grid header */
+#gridContainer header{
+    grid-area: 1 / 1 / span 2 / span 2;
+}
+
+/* sets first row */
+#gridContainer figure:nth-of-type(1) {
+    grid-area: 2 / 1 / span 2 / span 1;
+}
+
+#gridContainer section:nth-of-type(1){
+    grid-area: 2 / 2 / span 2 / span 1;
+}
+
+/* sets second row */
+#gridContainer section:nth-of-type(2){
+    grid-area: 4 / 1 / span 6 / span 1;
+}
+
+#gridContainer figure:nth-of-type(2) {
+    grid-area: 4 / 2 / span 6 / span 1;
+}
+
+/* sets flexbox selectors */
+#flexContainer {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#flexContainer header{
+    width: 100%;
+}
+
+#flexContainer section{
+    width: 46%;
+}
+
+#flexContainer figure{
+    width: 49%;
+}
+
+#flexContainer figure:nth-of-type(2) {
+    order: 4;
+}
+
+#flexContainer section:nth-of-type(2){
+    order: 3;
+}
